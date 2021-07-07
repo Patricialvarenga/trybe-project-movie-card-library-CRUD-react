@@ -5,12 +5,12 @@ import PropTypes from 'prop-types';
 class MovieCard extends React.Component {
   render() {
     const { movie } = this.props;
-    const { title, storyline } = movie;
+    const { title, storyline, id } = movie;
     return (
       <div data-testid="movie-card">
         <h3>{ title }</h3>
         <p>{ storyline }</p>
-        <p><Link to={ `/movies/${movie.id}` }>VER DETALHES</Link></p>
+        <p><Link to={ `/movies/${id}` }>VER DETALHES</Link></p>
       </div>
     );
   }
